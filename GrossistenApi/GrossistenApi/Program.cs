@@ -1,5 +1,7 @@
 using Scalar.AspNetCore;
 using Microsoft.AspNetCore.OpenApi;
+using GrossistenApi.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace GrossistenApi
 {
@@ -28,8 +30,12 @@ namespace GrossistenApi
 
             builder.Services.AddEndpointsApiExplorer();
 
+            builder.Services.AddDbContext<GrossistenApiDatabaseContext>(options =>
+                options.UseSqlServer(
+                builder.Configuration.GetConnectionString("DefaultConnection")
+                )
+            );
             var app = builder.Build();
-
 
 
             // Configure the HTTP request pipeline.  
