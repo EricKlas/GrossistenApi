@@ -10,9 +10,10 @@
         public double? Price { get; set; }
         public string? Category { get; set; }
         public int? Quantity { get; set; }
-        public bool? AvaibleToPurchase { get; set; }
-        public bool? InStock { get; set; }
-        public bool? OnReceipt { get; set; }
+        public bool? ShowInAvailableToPurchase { get; set; }
+        public bool? ShowInStock { get; set; }
+        public bool? ShowOnReceipt { get; set; }
+        public int? ReceiptId { get; set; }
     }
 
 }

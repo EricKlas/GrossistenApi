@@ -46,17 +46,17 @@ namespace GrossistenApi.Data
 
             var receipts = new List<Receipt>();
             // skrev bara saker in i ReceiptProductId som test data har ingen relation till något
-            receipts.Add(new Receipt { Id = 1, ReceiptProductId = 3, PersonName = "Peter Nilsson", Incoming = new DateTime(2025, 5, 6, 0, 0, 0, DateTimeKind.Local), Outgoing = null, IncomingReceipt = true, OutgoingReceipt = false });
-            receipts.Add(new Receipt { Id = 2, ReceiptProductId = 2, PersonName = "Maria Andersson", Incoming = new DateTime(2025, 5, 3, 0, 0, 0, DateTimeKind.Local), Outgoing = null, IncomingReceipt = true, OutgoingReceipt = false });
-            receipts.Add(new Receipt { Id = 3, ReceiptProductId = 7, PersonName = "Johan Karlsson", Incoming = new DateTime(2025, 5, 2, 0, 0, 0, DateTimeKind.Local), Outgoing = null, IncomingReceipt = true, OutgoingReceipt = false });
-            receipts.Add(new Receipt { Id = 4, ReceiptProductId = 10, PersonName = "Elin Larsson", Incoming = new DateTime(2025, 4, 7, 0, 0, 0, DateTimeKind.Local), Outgoing = null, IncomingReceipt = true, OutgoingReceipt = false });
-            receipts.Add(new Receipt { Id = 5, ReceiptProductId = 17, PersonName = "Lars Gustafsson", Incoming = new DateTime(2025, 3, 12, 0, 0, 0, DateTimeKind.Local), Outgoing = null, IncomingReceipt = true, OutgoingReceipt = false });
-            receipts.Add(new Receipt { Id = 9, ReceiptProductId = 5, PersonName = "Fredrik Öberg", Incoming = new DateTime(2025, 2, 12, 0, 0, 0, DateTimeKind.Local), Outgoing = null, IncomingReceipt = true, OutgoingReceipt = false });
-            receipts.Add(new Receipt { Id = 10, ReceiptProductId = 12, PersonName = "Maria Johansson", Incoming = new DateTime(2025, 3, 7, 0, 0, 0, DateTimeKind.Local), Outgoing = null, IncomingReceipt = true, OutgoingReceipt = false });
+            receipts.Add(new Receipt { Id = 1, WorkerName = "Peter Nilsson", DateAndTimeCreated = new DateTime(2025, 5, 6, 0, 0, 0, DateTimeKind.Local), showAsIncomingReceipt = true, showAsOutgoingReceipt = false });
+            receipts.Add(new Receipt { Id = 2, WorkerName = "Maria Andersson", DateAndTimeCreated = new DateTime(2025, 5, 3, 0, 0, 0, DateTimeKind.Local), showAsIncomingReceipt = true, showAsOutgoingReceipt = false });
+            receipts.Add(new Receipt { Id = 3, WorkerName = "Johan Karlsson", DateAndTimeCreated = new DateTime(2025, 5, 2, 0, 0, 0, DateTimeKind.Local), showAsIncomingReceipt = true, showAsOutgoingReceipt = false });
+            receipts.Add(new Receipt { Id = 4, WorkerName = "Elin Larsson", DateAndTimeCreated = new DateTime(2025, 4, 7, 0, 0, 0, DateTimeKind.Local), showAsIncomingReceipt = true, showAsOutgoingReceipt = false });
+            receipts.Add(new Receipt { Id = 5, WorkerName = "Lars Gustafsson", DateAndTimeCreated = new DateTime(2025, 3, 12, 0, 0, 0, DateTimeKind.Local), showAsIncomingReceipt = true, showAsOutgoingReceipt = false });
+            receipts.Add(new Receipt { Id = 9, WorkerName = "Fredrik Öberg", DateAndTimeCreated = new DateTime(2025, 2, 12, 0, 0, 0, DateTimeKind.Local), showAsIncomingReceipt = true, showAsOutgoingReceipt = false });
+            receipts.Add(new Receipt { Id = 10, WorkerName = "Maria Johansson", DateAndTimeCreated = new DateTime(2025, 3, 7, 0, 0, 0, DateTimeKind.Local), showAsIncomingReceipt = true, showAsOutgoingReceipt = false });
+            receipts.Add(new Receipt { Id = 6, WorkerName = "Anna Sjöberg", DateAndTimeCreated = new DateTime(2025, 5, 2, 0, 0, 0, DateTimeKind.Local), showAsIncomingReceipt = false, showAsOutgoingReceipt = true });
+            receipts.Add(new Receipt { Id = 7, WorkerName = "Oskar Lindqvist", DateAndTimeCreated = new DateTime(2025, 4, 2, 0, 0, 0, DateTimeKind.Local), showAsIncomingReceipt = false, showAsOutgoingReceipt = true });
+            receipts.Add(new Receipt { Id = 8, WorkerName = "Sara Ek", DateAndTimeCreated = new DateTime(2025, 5, 7, 0, 0, 0, DateTimeKind.Local), showAsIncomingReceipt = false, showAsOutgoingReceipt = true });
 
-            receipts.Add(new Receipt { Id = 6, ReceiptProductId = 1, PersonName = "Anna Sjöberg", Incoming = null, Outgoing = new DateTime(2025, 5, 2, 0, 0, 0, DateTimeKind.Local), IncomingReceipt = false, OutgoingReceipt = true });
-            receipts.Add(new Receipt { Id = 7, ReceiptProductId = 13, PersonName = "Oskar Lindqvist", Incoming = null, Outgoing = new DateTime(2025, 4, 2, 0, 0, 0, DateTimeKind.Local), IncomingReceipt = false, OutgoingReceipt = true });
-            receipts.Add(new Receipt { Id = 8, ReceiptProductId = 20, PersonName = "Sara Ek", Incoming = null, Outgoing = new DateTime(2025, 5, 7, 0, 0, 0, DateTimeKind.Local), IncomingReceipt = false, OutgoingReceipt = true });
 
             builder.Entity<Product>().HasData(products);
             builder.Entity<Receipt>().HasData(receipts);

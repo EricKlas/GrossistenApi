@@ -7,7 +7,7 @@ using System.Runtime.CompilerServices;
 namespace GrossistenApi.Controller
 {
     [ApiController]
-    [Route("api/Reciept")]
+    [Route("api/Receipt")]
     public class ReceiptController : ControllerBase
     {
         private readonly GrossistenApiDatabaseContext _context;

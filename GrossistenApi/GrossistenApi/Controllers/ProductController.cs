@@ -52,6 +52,21 @@ namespace GrossistenApi.Controller
             return NoContent();
         }
 
+        [HttpPut("bulk")]
+        public async Task<IActionResult> PutBulkProduct([FromBody] List<Product> products)
+        {
+            var existing = await _context.ProductsTable
+                                         .Where(p => products.Select(x => x.Id).Contains(p.Id))
+                                         .ToListAsync();
+            if (existing.Count != products.Count) return NotFound();
+
+            foreach (var e in existing)
+                e.Quantity = products.First(p => p.Id == e.Id).Quantity;
+
+            await _context.SaveChangesAsync();
+            return NoContent();
+        }
+
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteProduct(int id)
         {

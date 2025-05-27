@@ -3,12 +3,10 @@
     public class Receipt
     {
         public int Id { get; set; }
-        public int? ReceiptProductId { get; set; }
-        public string? PersonName { get; set; }
-        public DateTime? Incoming { get; set; }
-        public DateTime? Outgoing { get; set; }
-        public bool? IncomingReceipt { get; set; }
-        public bool? OutgoingReceipt { get; set; }
+        public string? WorkerName { get; set; }
+        public DateTime? DateAndTimeCreated { get; set; }
+        public bool? showAsIncomingReceipt { get; set; }
+        public bool? showAsOutgoingReceipt { get; set; }
 
     }
 }
