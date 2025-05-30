@@ -61,7 +61,19 @@ namespace GrossistenApi.Controller
             if (existing.Count != products.Count) return NotFound();
 
             foreach (var e in existing)
+            {
                 e.Quantity = products.First(p => p.Id == e.Id).Quantity;
+                e.Title = products.First(p => p.Id == e.Id).Title;
+                e.Description = products.First(p => p.Id == e.Id).Description;
+                e.Size = products.First(p => p.Id == e.Id).Size;
+                e.Price = products.First(p => p.Id == e.Id).Price;
+                e.Category = products.First(p => p.Id == e.Id).Category;
+                e.ShowInAvailableToPurchase = products.First(p => p.Id == e.Id).ShowInAvailableToPurchase;
+                e.ShowInStock = products.First(p => p.Id == e.Id).ShowInStock;
+                e.ShowOnReceipt = products.First(p => p.Id == e.Id).ShowOnReceipt;
+                e.ReceiptId = products.First(p => p.Id == e.Id).ReceiptId;
+            }
+                
 
             await _context.SaveChangesAsync();
             return NoContent();
