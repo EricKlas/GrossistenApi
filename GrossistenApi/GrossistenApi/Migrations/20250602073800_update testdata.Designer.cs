@@ -4,6 +4,7 @@ using GrossistenApi.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GrossistenApi.Migrations
 {
     [DbContext(typeof(GrossistenApiDatabaseContext))]
-    partial class GrossistenApiDatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20250602073800_update testdata")]
+    partial class updatetestdata
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -72,7 +75,7 @@ namespace GrossistenApi.Migrations
                         {
                             Id = 1,
                             ArticleNumber = "4006381333931",
-                            Category = "Kläder",
+                            Category = "Clothes",
                             Description = "Klassisk vit t-shirt",
                             Price = 199.0,
                             Quantity = 150,
@@ -86,7 +89,7 @@ namespace GrossistenApi.Migrations
                         {
                             Id = 2,
                             ArticleNumber = "5012345678900",
-                            Category = "Kläder",
+                            Category = "Clothes",
                             Description = "Blå jeans, normal passform",
                             Price = 499.0,
                             Quantity = 80,
@@ -101,7 +104,7 @@ namespace GrossistenApi.Migrations
                         {
                             Id = 3,
                             ArticleNumber = "5023456789012",
-                            Category = "Skor",
+                            Category = "Footwear",
                             Description = "Löparsneakers",
                             Price = 899.0,
                             Quantity = 60,
@@ -115,7 +118,7 @@ namespace GrossistenApi.Migrations
                         {
                             Id = 4,
                             ArticleNumber = "6012345678901",
-                            Category = "Kläder",
+                            Category = "Clothes",
                             Description = "Grå hoodie",
                             Price = 599.0,
                             Quantity = 40,
@@ -130,7 +133,7 @@ namespace GrossistenApi.Migrations
                         {
                             Id = 5,
                             ArticleNumber = "7012345678902",
-                            Category = "Accessoarer",
+                            Category = "Accessories",
                             Description = "Basebollkeps",
                             Price = 149.0,
                             Quantity = 200,
@@ -144,7 +147,7 @@ namespace GrossistenApi.Migrations
                         {
                             Id = 6,
                             ArticleNumber = "8001234567890",
-                            Category = "Accessoarer",
+                            Category = "Accessories",
                             Description = "Analog klocka",
                             Price = 1299.0,
                             Quantity = 30,
@@ -152,14 +155,13 @@ namespace GrossistenApi.Migrations
                             ShowInAvailableToPurchase = true,
                             ShowInStock = true,
                             ShowOnReceipt = true,
-                            Size = "25 cm",
                             Title = "Klocka"
                         },
                         new
                         {
                             Id = 7,
                             ArticleNumber = "9001234567891",
-                            Category = "Elektronik",
+                            Category = "Electronics",
                             Description = "33 cm ultrabook",
                             Price = 9999.0,
                             Quantity = 0,
@@ -173,21 +175,21 @@ namespace GrossistenApi.Migrations
                         {
                             Id = 8,
                             ArticleNumber = "3001234567892",
-                            Category = "Hem",
+                            Category = "Home",
                             Description = "Keramisk mugg 350 ml",
                             Price = 99.0,
                             Quantity = 120,
                             ShowInAvailableToPurchase = true,
                             ShowInStock = true,
                             ShowOnReceipt = false,
-                            Size = "8 cm",
+                            Size = "350 ml",
                             Title = "Kaffemugg"
                         },
                         new
                         {
                             Id = 9,
                             ArticleNumber = "2001234567893",
-                            Category = "Accessoarer",
+                            Category = "Accessories",
                             Description = "Reseryggsäck 20 L",
                             Price = 799.0,
                             Quantity = 50,
@@ -201,21 +203,20 @@ namespace GrossistenApi.Migrations
                         {
                             Id = 10,
                             ArticleNumber = "1001234567894",
-                            Category = "Accessoarer",
+                            Category = "Accessories",
                             Description = "UV-skydd",
                             Price = 399.0,
                             Quantity = 75,
                             ShowInAvailableToPurchase = false,
                             ShowInStock = true,
                             ShowOnReceipt = false,
-                            Size = "52 mm",
                             Title = "Solglasögon"
                         },
                         new
                         {
                             Id = 11,
                             ArticleNumber = "1101234567895",
-                            Category = "Böcker",
+                            Category = "Books",
                             Description = "The Great Gatsby",
                             Price = 149.0,
                             Quantity = 100,
@@ -223,14 +224,13 @@ namespace GrossistenApi.Migrations
                             ShowInAvailableToPurchase = true,
                             ShowInStock = true,
                             ShowOnReceipt = true,
-                            Size = "13×20 cm",
                             Title = "Bok"
                         },
                         new
                         {
                             Id = 12,
                             ArticleNumber = "1201234567896",
-                            Category = "Leksaker",
+                            Category = "Toys",
                             Description = "Träschackspel",
                             Price = 349.0,
                             Quantity = 20,
@@ -238,29 +238,27 @@ namespace GrossistenApi.Migrations
                             ShowInAvailableToPurchase = true,
                             ShowInStock = true,
                             ShowOnReceipt = false,
-                            Size = "40×40 cm",
                             Title = "Schackspel"
                         },
                         new
                         {
                             Id = 13,
                             ArticleNumber = "1301234567897",
-                            Category = "Leksaker",
+                            Category = "Toys",
                             Description = "Superhjältefigur",
                             Price = 249.0,
                             Quantity = 60,
                             ReceiptId = 3,
                             ShowInAvailableToPurchase = true,
                             ShowInStock = true,
-                            ShowOnReceipt = true,
-                            Size = "15 cm",
+                            ShowOnReceipt = false,
                             Title = "Actionfigur"
                         },
                         new
                         {
                             Id = 14,
                             ArticleNumber = "1401234567898",
-                            Category = "Hem",
+                            Category = "Home",
                             Description = "24-delars set i rostfritt stål",
                             Price = 599.0,
                             Quantity = 80,
@@ -268,14 +266,13 @@ namespace GrossistenApi.Migrations
                             ShowInAvailableToPurchase = true,
                             ShowInStock = true,
                             ShowOnReceipt = false,
-                            Size = "30×20×5 cm",
                             Title = "Bestickset"
                         },
                         new
                         {
                             Id = 15,
                             ArticleNumber = "1501234567899",
-                            Category = "Hem",
+                            Category = "Home",
                             Description = "LED-skrivbordslampa",
                             Price = 349.0,
                             Quantity = 35,
@@ -283,21 +280,20 @@ namespace GrossistenApi.Migrations
                             ShowInAvailableToPurchase = true,
                             ShowInStock = true,
                             ShowOnReceipt = true,
-                            Size = "45 cm",
                             Title = "Skrivbordslampa"
                         },
                         new
                         {
                             Id = 16,
                             ArticleNumber = "1601234567800",
-                            Category = "Skönhet",
+                            Category = "Beauty",
                             Description = "Blommig doft 50 ml",
                             Price = 799.0,
                             Quantity = 0,
                             ReceiptId = 6,
                             ShowInAvailableToPurchase = true,
                             ShowInStock = false,
-                            ShowOnReceipt = true,
+                            ShowOnReceipt = false,
                             Size = "50 ml",
                             Title = "Parfym"
                         },
@@ -305,22 +301,21 @@ namespace GrossistenApi.Migrations
                         {
                             Id = 17,
                             ArticleNumber = "1701234567801",
-                            Category = "Elektronik",
+                            Category = "Electronics",
                             Description = "Trådlösa over-ear",
                             Price = 1299.0,
                             Quantity = 45,
                             ReceiptId = 7,
                             ShowInAvailableToPurchase = true,
                             ShowInStock = true,
-                            ShowOnReceipt = true,
-                            Size = "15×18 cm",
+                            ShowOnReceipt = false,
                             Title = "Hörlurar"
                         },
                         new
                         {
                             Id = 18,
                             ArticleNumber = "1801234567802",
-                            Category = "Sport",
+                            Category = "Sports",
                             Description = "Halkfri 6 mm",
                             Price = 299.0,
                             Quantity = 0,
@@ -328,44 +323,41 @@ namespace GrossistenApi.Migrations
                             ShowInAvailableToPurchase = true,
                             ShowInStock = false,
                             ShowOnReceipt = true,
-                            Size = "183×61 cm",
                             Title = "Yogamatta"
                         },
                         new
                         {
                             Id = 19,
                             ArticleNumber = "1901234567803",
-                            Category = "Utomhus",
+                            Category = "Outdoor",
                             Description = "Tält för 2 personer",
                             Price = 1599.0,
                             Quantity = 15,
                             ReceiptId = 9,
                             ShowInAvailableToPurchase = false,
                             ShowInStock = true,
-                            ShowOnReceipt = true,
-                            Size = "210×140×110 cm",
+                            ShowOnReceipt = false,
                             Title = "Tält"
                         },
                         new
                         {
                             Id = 20,
                             ArticleNumber = "2101234567804",
-                            Category = "Husdjur",
+                            Category = "Pet",
                             Description = "Hållbar tuggleksak",
                             Price = 129.0,
                             Quantity = 90,
                             ReceiptId = 10,
                             ShowInAvailableToPurchase = true,
                             ShowInStock = true,
-                            ShowOnReceipt = true,
-                            Size = "15×5 cm",
+                            ShowOnReceipt = false,
                             Title = "Hundleksak"
                         },
                         new
                         {
                             Id = 21,
                             ArticleNumber = "2201234567805",
-                            Category = "Kläder",
+                            Category = "Clothes",
                             Description = "Vattentät jacka",
                             Price = 899.0,
                             Quantity = 30,
@@ -379,7 +371,7 @@ namespace GrossistenApi.Migrations
                         {
                             Id = 22,
                             ArticleNumber = "2301234567806",
-                            Category = "Skor",
+                            Category = "Footwear",
                             Description = "Sommarsandaler",
                             Price = 349.0,
                             Quantity = 45,
@@ -393,7 +385,7 @@ namespace GrossistenApi.Migrations
                         {
                             Id = 23,
                             ArticleNumber = "2401234567807",
-                            Category = "Accessoarer",
+                            Category = "Accessories",
                             Description = "Läderbälte",
                             Price = 299.0,
                             Quantity = 60,
@@ -407,77 +399,72 @@ namespace GrossistenApi.Migrations
                         {
                             Id = 24,
                             ArticleNumber = "2501234567808",
-                            Category = "Elektronik",
+                            Category = "Electronics",
                             Description = "6,5\" skärm, 128GB",
                             Price = 5999.0,
                             Quantity = 25,
                             ShowInAvailableToPurchase = true,
                             ShowInStock = true,
                             ShowOnReceipt = true,
-                            Size = "16×7,5×0,8 cm",
                             Title = "Smartphone"
                         },
                         new
                         {
                             Id = 25,
                             ArticleNumber = "2601234567809",
-                            Category = "Hem",
+                            Category = "Home",
                             Description = "Bomull, 45×45 cm",
                             Price = 199.0,
                             Quantity = 100,
                             ShowInAvailableToPurchase = true,
                             ShowInStock = true,
                             ShowOnReceipt = false,
-                            Size = "45×45 cm",
                             Title = "Prydnadskudde"
                         },
                         new
                         {
                             Id = 26,
                             ArticleNumber = "2701234567810",
-                            Category = "Böcker",
+                            Category = "Books",
                             Description = "Vegetariska recept",
                             Price = 249.0,
                             Quantity = 80,
                             ShowInAvailableToPurchase = true,
                             ShowInStock = true,
                             ShowOnReceipt = true,
-                            Size = "18×24 cm",
                             Title = "Kokbok"
                         },
                         new
                         {
                             Id = 27,
                             ArticleNumber = "2801234567811",
-                            Category = "Leksaker",
+                            Category = "Toys",
                             Description = "1000 bitar landskap",
                             Price = 159.0,
                             Quantity = 70,
                             ShowInAvailableToPurchase = true,
                             ShowInStock = true,
                             ShowOnReceipt = false,
-                            Size = "50×70 cm",
                             Title = "Pussel"
                         },
                         new
                         {
                             Id = 28,
                             ArticleNumber = "2901234567812",
-                            Category = "Skönhet",
+                            Category = "Beauty",
                             Description = "Fuktgivande 200 ml",
                             Price = 129.0,
                             Quantity = 50,
                             ShowInAvailableToPurchase = true,
                             ShowInStock = true,
                             ShowOnReceipt = false,
-                            Size = "200 ml",
                             Title = "Lotion"
                         },
                         new
                         {
                             Id = 29,
                             ArticleNumber = "3001234567813",
-                            Category = "Sport",
+                            Category = "Sports",
                             Description = "Strl S/M, justerbar",
                             Price = 499.0,
                             Quantity = 40,
@@ -491,35 +478,33 @@ namespace GrossistenApi.Migrations
                         {
                             Id = 30,
                             ArticleNumber = "3101234567814",
-                            Category = "Utomhus",
+                            Category = "Outdoor",
                             Description = "Lättvikts för camping",
                             Price = 699.0,
                             Quantity = 20,
                             ShowInAvailableToPurchase = true,
                             ShowInStock = true,
                             ShowOnReceipt = true,
-                            Size = "210×75 cm",
                             Title = "Sovsäck"
                         },
                         new
                         {
                             Id = 31,
                             ArticleNumber = "3201234567815",
-                            Category = "Husdjur",
+                            Category = "Pet",
                             Description = "Fjäder på pinne",
                             Price = 79.0,
                             Quantity = 120,
                             ShowInAvailableToPurchase = true,
                             ShowInStock = true,
                             ShowOnReceipt = false,
-                            Size = "30 cm",
                             Title = "Kattleksak"
                         },
                         new
                         {
                             Id = 32,
                             ArticleNumber = "3301234567816",
-                            Category = "Kläder",
+                            Category = "Clothes",
                             Description = "Svart t-shirt",
                             Price = 199.0,
                             Quantity = 90,
@@ -533,7 +518,7 @@ namespace GrossistenApi.Migrations
                         {
                             Id = 33,
                             ArticleNumber = "3401234567817",
-                            Category = "Skor",
+                            Category = "Footwear",
                             Description = "Vandringskängor",
                             Price = 1299.0,
                             Quantity = 35,
@@ -547,98 +532,91 @@ namespace GrossistenApi.Migrations
                         {
                             Id = 34,
                             ArticleNumber = "3501234567818",
-                            Category = "Accessoarer",
+                            Category = "Accessories",
                             Description = "Läder, svart",
                             Price = 349.0,
                             Quantity = 55,
                             ShowInAvailableToPurchase = true,
                             ShowInStock = true,
                             ShowOnReceipt = false,
-                            Size = "10×8 cm",
                             Title = "Plånbok"
                         },
                         new
                         {
                             Id = 35,
                             ArticleNumber = "3601234567819",
-                            Category = "Elektronik",
+                            Category = "Electronics",
                             Description = "Portabel, vattentät",
                             Price = 799.0,
                             Quantity = 45,
                             ShowInAvailableToPurchase = true,
                             ShowInStock = true,
                             ShowOnReceipt = true,
-                            Size = "15×8×7 cm",
                             Title = "Bluetooth-högtalare"
                         },
                         new
                         {
                             Id = 36,
                             ArticleNumber = "3701234567820",
-                            Category = "Hem",
+                            Category = "Home",
                             Description = "Analog träfinish",
                             Price = 299.0,
                             Quantity = 65,
                             ShowInAvailableToPurchase = true,
                             ShowInStock = true,
                             ShowOnReceipt = false,
-                            Size = "20 cm",
                             Title = "Väggklocka"
                         },
                         new
                         {
                             Id = 37,
                             ArticleNumber = "3801234567821",
-                            Category = "Böcker",
+                            Category = "Books",
                             Description = "Moderna klassiker",
                             Price = 179.0,
                             Quantity = 90,
                             ShowInAvailableToPurchase = true,
                             ShowInStock = true,
                             ShowOnReceipt = true,
-                            Size = "12×19 cm",
                             Title = "Roman"
                         },
                         new
                         {
                             Id = 38,
                             ArticleNumber = "3901234567822",
-                            Category = "Leksaker",
+                            Category = "Toys",
                             Description = "Strategispel för 2–4",
                             Price = 399.0,
                             Quantity = 40,
                             ShowInAvailableToPurchase = true,
                             ShowInStock = true,
                             ShowOnReceipt = false,
-                            Size = "30×30×5 cm",
                             Title = "Brädspel"
                         },
                         new
                         {
                             Id = 39,
                             ArticleNumber = "4001234567823",
-                            Category = "Skönhet",
+                            Category = "Beauty",
                             Description = "Ögonskugga & läppstift",
                             Price = 499.0,
                             Quantity = 30,
                             ShowInAvailableToPurchase = true,
                             ShowInStock = true,
                             ShowOnReceipt = false,
-                            Size = "20×15×3 cm",
                             Title = "Sminkkit"
                         },
                         new
                         {
                             Id = 40,
                             ArticleNumber = "4101234567824",
-                            Category = "Sport",
+                            Category = "Sports",
                             Description = "2×5 kg, justerbart",
                             Price = 899.0,
                             Quantity = 25,
                             ShowInAvailableToPurchase = true,
                             ShowInStock = true,
                             ShowOnReceipt = true,
-                            Size = "25 cm",
                             Title = "Hantelset"
                         });
                 });
