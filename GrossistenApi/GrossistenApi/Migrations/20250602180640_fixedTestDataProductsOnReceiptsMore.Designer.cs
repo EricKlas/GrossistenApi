@@ -4,6 +4,7 @@ using GrossistenApi.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GrossistenApi.Migrations
 {
     [DbContext(typeof(GrossistenApiDatabaseContext))]
-    partial class GrossistenApiDatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20250602180640_fixedTestDataProductsOnReceiptsMore")]
+    partial class fixedTestDataProductsOnReceiptsMore
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -159,7 +162,7 @@ namespace GrossistenApi.Migrations
                             Category = "Elektronik",
                             Description = "33 cm ultrabook",
                             Price = 9999.0,
-                            Quantity = 10,
+                            Quantity = 0,
                             ShowInAvailableToPurchase = true,
                             ShowInStock = true,
                             ShowOnReceipt = false,
@@ -285,7 +288,7 @@ namespace GrossistenApi.Migrations
                             Category = "Skönhet",
                             Description = "Blommig doft 50 ml",
                             Price = 799.0,
-                            Quantity = 10,
+                            Quantity = 0,
                             ShowInAvailableToPurchase = true,
                             ShowInStock = true,
                             ShowOnReceipt = false,
@@ -313,7 +316,7 @@ namespace GrossistenApi.Migrations
                             Category = "Sport",
                             Description = "Halkfri 6 mm",
                             Price = 299.0,
-                            Quantity = 10,
+                            Quantity = 0,
                             ShowInAvailableToPurchase = true,
                             ShowInStock = true,
                             ShowOnReceipt = false,
